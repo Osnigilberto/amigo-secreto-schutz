@@ -36,14 +36,18 @@
 .header h1 {
   color: #881188;
   font-size: 28px;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   line-height: 1.3;
 }
 
-.header p {
-  color: #666;
-  font-size: 16px;
-  line-height: 1.5;
+.nomeDestaque {
+  background: linear-gradient(135deg, #ddbbff 0%, #ffeeaa 100%);
+  color: #881188;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  border: 2px solid #881188;
 }
 
 .form {
@@ -72,18 +76,6 @@
   font-size: 14px;
   line-height: 1.5;
   border-left: 4px solid #881188;
-  animation: slideIn 0.5s ease-out;
-}
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
 }
 
 .input {
@@ -262,179 +254,26 @@
   line-height: 1.5;
 }
 
-/* Estilos da tela de sucesso */
-.sucessoContainer {
-  text-align: center;
-  animation: fadeIn 0.5s ease-out;
+.sucesso {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 14px 16px;
+  border-radius: 8px;
+  border-left: 4px solid #4caf50;
+  font-size: 14px;
+  line-height: 1.5;
+  animation: slideIn 0.3s ease-out;
 }
 
-@keyframes fadeIn {
+@keyframes slideIn {
   from {
     opacity: 0;
+    transform: translateY(-10px);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
-}
-
-.sucessoIcone {
-  font-size: 64px;
-  margin-bottom: 16px;
-  animation: bounce 0.6s ease-out;
-}
-
-@keyframes bounce {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-}
-
-.sucessoTitulo {
-  color: #881188;
-  font-size: 24px;
-  margin-bottom: 24px;
-}
-
-.alertaImportante {
-  background: linear-gradient(135deg, #ffeeaa 0%, #ffe680 100%);
-  border: 2px solid #881188;
-  border-radius: 12px;
-  padding: 16px;
-  margin-bottom: 24px;
-  text-align: left;
-}
-
-.alertaImportante strong {
-  display: block;
-  color: #881188;
-  font-size: 16px;
-  margin-bottom: 8px;
-}
-
-.alertaImportante p {
-  color: #333;
-  font-size: 15px;
-  margin: 0;
-  line-height: 1.5;
-}
-
-.linkContainer {
-  margin-bottom: 24px;
-}
-
-.linkLabel {
-  color: #666;
-  font-size: 14px;
-  margin-bottom: 8px;
-  font-weight: 600;
-}
-
-.linkBox {
-  background: #f5f5f5;
-  border: 2px solid #ddbbff;
-  border-radius: 8px;
-  padding: 16px;
-  word-break: break-all;
-  font-size: 14px;
-  color: #881188;
-  font-family: monospace;
-  line-height: 1.6;
-}
-
-.botoesLink {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-bottom: 24px;
-}
-
-.btnCopiar, .btnWhatsApp {
-  padding: 16px 24px;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  min-height: 56px;
-  -webkit-tap-highlight-color: transparent;
-  touch-action: manipulation;
-}
-
-.btnCopiar {
-  background: white;
-  color: #881188;
-  border: 2px solid #881188;
-}
-
-.btnCopiar:hover {
-  background: #881188;
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(136, 17, 136, 0.3);
-}
-
-.btnWhatsApp {
-  background: #25D366;
-  color: white;
-}
-
-.btnWhatsApp:hover {
-  background: #1da851;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
-}
-
-.btnCopiar:active, .btnWhatsApp:active {
-  transform: translateY(0);
-}
-
-.instrucoes {
-  background: #f9f9f9;
-  border-radius: 12px;
-  padding: 20px;
-  text-align: left;
-  margin-bottom: 24px;
-}
-
-.instrucoes h3 {
-  color: #881188;
-  font-size: 16px;
-  margin-bottom: 12px;
-}
-
-.instrucoes ol {
-  margin: 0;
-  padding-left: 24px;
-  color: #555;
-}
-
-.instrucoes li {
-  margin-bottom: 8px;
-  line-height: 1.6;
-  font-size: 15px;
-}
-
-.btnVoltar {
-  background: white;
-  color: #881188;
-  border: 2px solid #ddbbff;
-  border-radius: 8px;
-  padding: 14px 24px;
-  font-size: 16px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  min-height: 48px;
-  -webkit-tap-highlight-color: transparent;
-  touch-action: manipulation;
-  width: 100%;
-}
-
-.btnVoltar:hover {
-  background: #ddbbff;
-  transform: translateY(-2px);
-}
-
-.btnVoltar:active {
-  transform: translateY(0);
 }
 
 .footer {
@@ -462,6 +301,108 @@
   transform: scale(1.05);
 }
 
+.avisoImportante {
+  background: linear-gradient(135deg, #ffeeaa 0%, #ffe680 100%);
+  border: 2px solid #881188;
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 24px;
+  text-align: center;
+}
+
+.avisoImportante strong {
+  display: block;
+  color: #881188;
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.avisoImportante {
+  color: #333;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Tela de loading */
+.loadingCard {
+  background: white;
+  border-radius: 12px;
+  padding: 48px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(136, 17, 136, 0.15);
+  max-width: 400px;
+  margin: 100px auto;
+}
+
+.spinner {
+  border: 4px solid #ddbbff;
+  border-top: 4px solid #881188;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 16px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loadingCard p {
+  color: #881188;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Tela de erro */
+.erroContainer {
+  text-align: center;
+  padding: 20px;
+}
+
+.erroIcone {
+  font-size: 64px;
+  margin-bottom: 16px;
+}
+
+.erroContainer h2 {
+  color: #881188;
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.erroContainer p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.btnVoltar {
+  display: inline-block;
+  background: linear-gradient(135deg, #881188 0%, #ddbbff 100%);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  min-height: 48px;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.btnVoltar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(136, 17, 136, 0.3);
+  text-decoration: none;
+}
+
+.btnVoltar:active {
+  transform: translateY(0);
+}
+
 /* Responsivo para tablets */
 @media (max-width: 768px) {
   .container {
@@ -477,12 +418,8 @@
     font-size: 24px;
   }
 
-  .header p {
-    font-size: 15px;
-  }
-
-  .sucessoTitulo {
-    font-size: 22px;
+  .nomeDestaque {
+    font-size: 16px;
   }
 }
 
@@ -497,8 +434,9 @@
     font-size: 22px;
   }
 
-  .header p {
-    font-size: 14px;
+  .nomeDestaque {
+    font-size: 15px;
+    padding: 10px 16px;
   }
 
   .dica {
@@ -514,22 +452,12 @@
     font-size: 16px;
   }
 
-  .sucessoIcone {
+  .erroIcone {
     font-size: 48px;
   }
 
-  .sucessoTitulo {
+  .erroContainer h2 {
     font-size: 20px;
-  }
-
-  .linkBox {
-    font-size: 12px;
-    padding: 12px;
-  }
-
-  .btnCopiar, .btnWhatsApp {
-    font-size: 15px;
-    min-height: 52px;
   }
 }
 
@@ -554,11 +482,6 @@
 
   .itemCard {
     padding: 12px;
-    margin-bottom: 12px;
-  }
-
-  .sucessoIcone {
-    font-size: 40px;
     margin-bottom: 12px;
   }
 }

@@ -1,4 +1,6 @@
 import './globals.css';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata = {
   title: 'Amigo Secreto da Família Schutz',
@@ -9,14 +11,18 @@ export const metadata = {
     initialScale: 1,
     maximumScale: 5,
     userScalable: true,
-    viewportFit: 'cover', // Para iPhones com notch
+    viewportFit: 'cover',
   },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+        <SpeedInsights />
+      </body>
     </html>
   );
 }
